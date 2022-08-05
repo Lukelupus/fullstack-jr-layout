@@ -1,4 +1,5 @@
 import asyncHandler from "express-async-handler"
+import Registration from "../models/registrationModel.js"
 
 const postRegistration = asyncHandler(async (req, res) => {
     const { nome, email, nascimento, telefone } =  req.body
@@ -7,16 +8,24 @@ const postRegistration = asyncHandler(async (req, res) => {
         res.status(400)
         throw new Error("Por favor preencha todos os campos.")
     }
-    else {
-        const newRegister = {
-            nome: nome,
-            email: email,
-            nascimento: nascimento,
-            telefone: telefone
-        }
-        register.push(newRegister)
-        res.status(201).json(register)
+
+    const registrationExists = await Registration.findOne({email})
+
+    if(registrationExists) {
+        res.status(400)
+        throw new Error("Email já cadastrado")
     }
+    
+    const newRegistration = await Registration.create({
+        name: nome,
+        email: email,
+        birth: nascimento,
+        tel: telefone
+    })
+
+    res.status(200).json(
+        newRegistration
+    )
 })
 
 export default postRegistration
