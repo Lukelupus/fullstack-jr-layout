@@ -1,30 +1,52 @@
 import React from "react"
+import { useMediaQuery } from "react-responsive"
 
+const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 992 })
+    return isDesktop ? children : null
+  }
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+    return isMobile ? children : null
+  }
 
 function Header() {
     return(<>
-    <div className="nav-container">
-        <nav className="navbar">
-            <ul className="navbar-nav">
-                <li className="nav-item">
+    <div className="header">
+        <div className="nav-container">
+            <nav className="navbar">
+                <div className="logo-container">
                     <img className="logo" src="logo-in8-dev.svg" alt="logo"></img>
-                </li>
-                <li className="nav-item">
-                    <a href="#cadastro">Cadastro</a>
-                </li>
-                <li className="nav-item">
-                <a href="#lista">Lista</a>
-                </li>
-                <li className="nav-item">
-                <a href="#sobre">Sobre Mim</a>
-                </li>
-            </ul>
+                </div>
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                        <a href="#cadastro">cadastro</a>
+                    </li>
+                    <hr className="header-hr"></hr>
+                    <li className="nav-item">
+                    <a href="#lista">lista</a>
+                    </li>
+                    <hr className="header-hr"></hr>
+                    <li className="nav-item">
+                    <a href="#sobre">sobre mim</a>
+                    </li>
+                </ul>
 
-        </nav>
-            
+            </nav>
+            <div className="header-container">
+                <h1 className="header-text">ESTÁGIO</h1>
+                <h2 className="header-subtext">PROVA DE SELEÇÃO</h2>
+            </div>
+        </div>
+     
     </div>
-            
-        
+        <Desktop>
+            <img className="index-img" src="imagens/index-image.jpg" alt="estagio prova de seleção desktop"></img>    
+        </Desktop>
+        <Mobile>
+        <img className="index-img" src="imagens/index-image-mobile.jpg" alt="estagio prova de seleção mobile"></img>
+        </Mobile>
+    
     </>
     )
 }

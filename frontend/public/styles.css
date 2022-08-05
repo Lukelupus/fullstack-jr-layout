@@ -1,43 +1,117 @@
-@font-face {
-    font-family: Helvetica;
-    src: url(Fonts/HelveticaUltraLt_0.ttf);
-  }
-  @font-face {
-    font-family: 'Roboto Light';
-    src: url(Fonts/Roboto-Light_0.ttf);
-  }
-  @font-face {
-    font-family: 'Roboto Regular';
-    src: url(Fonts/Roboto-Regular_0.ttf);
-  }
+
   
-  :root {
-    font-size: 16;
-    font-family:'Helvetica', 'Montserrat', sans-serif;
-    --text-primary: #29abe2;
-    --text-secondary: #012d51;
-    --bg-primary: white;
-    --bg-secondary: #29abe2; 
+
+a {
+    color: var(--bg-primary);
+    text-decoration: none;
 }
+
 
 
 /* Header */
 
-.nav-container {
+.header {
   display: grid;
+  background-color: transparent;
+  position: absolute;
+  width: 80%;
+  left: 17.5%;
+
+  
+    
+}
+
+
+.navbar {
+    z-index: 1;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 14px;
+    
+
+    
     
 }
 
 .navbar-nav {
     display: flex;
     flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3em;
+    gap: 1em;
+    
+    
 }
 
 .nav-item {
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Roboto Regular';
+   
 }
 
-.logo {
-    height: 50px;
-    width: 50px;
+
+.logo-container {
+   display: flex;
+   height: 10em;
+   width: 10em;
+   justify-content: center;
+   align-items: center;
+}
+
+.index-img {
+  
+    z-index: -1;
+    height: auto;
+    width: 100%;
+    
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    color: var(--bg-primary);
+    font-family: 'Helvetica 25';
+    text-align: left;
+    margin: 5em 0 0 6em;
+    line-height: 1.4;
+  
+
+   
+}
+
+.header-text {
+    display: inline-block;
+    font-size: 5.5em;
+    font-weight: lighter;
+    
+}
+
+.header-subtext {
+    display: inline-block;
+    font-weight: lighter;
+    font-size: 2.4em;
+}
+
+.header-hr {
+    border: 3px dotted;
+    color: antiquewhite;
+    height: 0;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/* --- Cadastro --*/
+
+.blue-section {
+    background-color: var(--bg-secondary);
 }

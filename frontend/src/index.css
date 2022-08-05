@@ -1,0 +1,39 @@
+
+  :root {
+    font-size: 16;
+    font-family:'Helvetica', 'Montserrat', sans-serif;
+    --text-primary: #29abe2;
+    --text-secondary: #012d51;
+    --bg-primary: white;
+    --bg-secondary: #29abe2; 
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ @font-face {
+    font-family: 'Helvetica 25';
+    src: local('Helvetica 25'),
+        url(../src/Fonts/HelveticaUltraLt_0.ttf) format("truetype");
+    font-weight: lighter;
+
+  }
+  @font-face {
+    font-family: ps;
+    src: local(ps),
+        url(../src/Fonts/ps.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: 'Roboto Light';
+    src: local('Roboto Leve'), 
+        url(../src/Fonts/Roboto-Light_0.ttf);
+  }
+  @font-face {
+    font-family: 'Roboto Regular';
+    src: local('Roboto Regular'), url(../src/Fonts/Roboto-Regular_0.ttf);
+  }
+
