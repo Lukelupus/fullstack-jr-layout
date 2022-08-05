@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const registerSchema = new Schema(
 {
     name: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         required: true,
         ref: 'Registration'
     },
@@ -15,7 +15,7 @@ const registerSchema = new Schema(
         required: [true, "Por favor adicione um email válido"]
     },
     birth: {
-        type: Date,
+        type: String,
         required: [true, "Por favor adicione data de aniversário"]
     },
     tel: {
