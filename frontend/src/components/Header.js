@@ -5,9 +5,9 @@ function Header() {
     return(<>
     <div className="nav-container">
         <nav className="navbar">
-            <ul>
-                <li className="logo">
-                    <img src="logo-in8-dev.svg" alt="logo"></img>
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                    <img className="logo" src="logo-in8-dev.svg" alt="logo"></img>
                 </li>
                 <li className="nav-item">
                     <a href="#cadastro">Cadastro</a>

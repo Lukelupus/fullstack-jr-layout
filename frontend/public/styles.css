@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(Fonts/HelveticaUltraLt_0.ttf);
+  }
+  @font-face {
+    font-family: 'Roboto Light';
+    src: url(Fonts/Roboto-Light_0.ttf);
+  }
+  @font-face {
+    font-family: 'Roboto Regular';
+    src: url(Fonts/Roboto-Regular_0.ttf);
+  }
+  
+  :root {
+    font-size: 16;
+    font-family:'Helvetica', 'Montserrat', sans-serif;
+    --text-primary: #29abe2;
+    --text-secondary: #012d51;
+    --bg-primary: white;
+    --bg-secondary: #29abe2; 
+}
+
+
+/* Header */
+
+.nav-container {
+  display: grid;
+    
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
