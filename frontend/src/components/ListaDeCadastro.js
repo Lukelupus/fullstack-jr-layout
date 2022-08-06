@@ -1,13 +1,5 @@
 import React from 'react'
 
-const data = [
-    {
-        name: "",
-        email:"",
-        birth:"",
-        tel:""
-    },
-]
 
 
 function ListaDeCadastro() {
@@ -23,15 +15,37 @@ function ListaDeCadastro() {
                         <th className="table-heading">Nascimento</th>
                         <th className="table-heading">Telefone</th>
                     </tr>
-                    {data.map((val, key) => {
-                        <tr key={key}>
-                            <td>{val.name}</td>
-                            <td>{val.email}</td>
-                            <td>{val.birth}</td>
-                            <td>{val.tel}</td>
-
-                        </tr>
-                    })}
+                    <tr>
+                        <td> </td>
+                        <td>    </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                
                 </table>
             </div>
         </>

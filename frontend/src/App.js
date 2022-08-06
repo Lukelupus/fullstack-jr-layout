@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Cadastro from "./components/Cadastro"
 import ListaDeCadastro from './components/ListaDeCadastro';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
     <Header />
     <Cadastro />
     <ListaDeCadastro />
+    <Footer />
 
   </>
   );
