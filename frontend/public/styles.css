@@ -237,3 +237,27 @@ table, th, td {
     font-family: 'Roboto Regular';
     color: var(--text-secondary);
 }
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-text {
+    margin: .75em;
+    font-family: 'Roboto Light';
+    font-size: 14px;
+}

@@ -15,11 +15,17 @@ function Footer() {
     return(
         <>
             <div className='footer'>
+                <div className='footer-info'>
+                    <p className='info-text'>Fulano Beltrano de Oliveira</p>
+                    <p className='info-text'>fulanobos@gmail.com</p>
+                    <p className='info-text'>(31) 9 9666-1111</p>
+                    <p className='info-text'>Faculdade de Belo Horizonte</p>
+                </div>
                 <Desktop>
-                    <img className='footer-img-desktop' alt='footer img' src='imagens/rodape-desktop.jpg'></img>
+                    <img className='index-img' alt='footer img' src='imagens/rodape-desktop.jpg'></img>
                 </Desktop>
                 <Mobile>
-                    <img className='footer-img-mobile' alt='footer img' src='imagens/rodape-mobile.jpg'></img>
+                    <img className='index-img' alt='footer img' src='imagens/rodape-mobile.jpg'></img>
                 </Mobile>
             </div>
         </>
