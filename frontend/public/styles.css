@@ -72,6 +72,7 @@ a {
     height: auto;
     width: 100%;
     
+    
 }
 
 .header-container {
@@ -115,7 +116,7 @@ a {
 
 form {
     width: 100%;
-    max-width: 550px;
+    max-width: 31.25em;
 }
 
 label {
@@ -124,6 +125,8 @@ label {
     bottom: 25px;
     font-size: .75em;
     font-family: 'Roboto Regular';
+    margin: 0.5em 0.2em;
+    
    
 }
 
@@ -135,9 +138,12 @@ input {
     cursor: text;
     border: 0;
     outline: 0;
-    border-bottom: .5px solid white;
+    border-bottom: 1px solid white;
     font-family: ps;
     font-weight: lighter;
+    font-size: 14px;
+    height: 1.25em;
+    margin: .25em 0;
     
 }
 
@@ -159,6 +165,8 @@ input:-webkit-autofill:active  {
     color: var(--bg-primary);
     align-items: center;
     justify-content: center;
+    outline: 3px solid var(--bg-secondary);
+    
 }
 
 .page-title {
@@ -189,4 +197,15 @@ input:-webkit-autofill:active  {
     padding: .2em 1em;
     border: 0;
     cursor: pointer;
+}
+
+
+/* Lista de Cadastro */
+
+.list-title {
+    font-family: 'Helvetica 25';
+    font-weight: bold;
+    font-size: 3em;
+    padding-top: 1em;
+    color: var(--text-primary);
 }

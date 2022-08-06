@@ -13,13 +13,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
+
 
  @font-face {
     font-family: 'Helvetica 25';
     src: local('Helvetica 25'),
         url(../src/Fonts/HelveticaUltraLt_0.ttf) format("truetype");
-    font-weight: lighter;
 
   }
   @font-face {
