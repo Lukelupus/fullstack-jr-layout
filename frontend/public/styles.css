@@ -202,10 +202,22 @@ input:-webkit-autofill:active  {
 
 /* Lista de Cadastro */
 
+.white-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .list-title {
     font-family: 'Helvetica 25';
     font-weight: bold;
     font-size: 3em;
     padding-top: 1em;
     color: var(--text-primary);
+}
+
+.table-heading {
+    font-family: 'Roboto Regular';
+    color: var(--text-secondary);
 }
