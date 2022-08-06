@@ -7,8 +7,9 @@ a {
 }
 
 
-
 /* Header */
+
+
 
 .header {
   display: grid;
@@ -112,6 +113,80 @@ a {
 
 /* --- Cadastro --*/
 
-.blue-section {
+form {
+    width: 100%;
+    max-width: 550px;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    font-size: .75em;
+    font-family: 'Roboto Regular';
+   
+}
+
+input {
+    width: 100%;
+    color: var(--bg-primary);
     background-color: var(--bg-secondary);
+    padding: .25em;
+    cursor: text;
+    border: 0;
+    outline: 0;
+    border-bottom: .5px solid white;
+    font-family: ps;
+    font-weight: lighter;
+    
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  box-shadow: var(--bg-secondary);
+  -webkit-box-shadow:0 0 0px 1000px var(--bg-secondary) inset;
+  -webkit-text-fill-color: white;
+  
+}
+
+
+.blue-section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary);
+    align-items: center;
+    justify-content: center;
+}
+
+.page-title {
+    font-family: 'Helvetica 25';
+    font-weight: lighter;
+    font-size: 3em;
+    padding-top: 1em;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-data {
+    width: 100%;
+    margin: 2em 0;
+    position: relative;
+    color: var(--bg-primary);
+}
+
+.btn {
+    font-family: 'Helvetica 25';
+    color: var(--bg-secondary);
+    font-size: 2.75em;
+    background-color: var(--text-secondary);
+    margin: .6em 1em 1em;
+    padding: .2em 1em;
+    border: 0;
+    cursor: pointer;
 }

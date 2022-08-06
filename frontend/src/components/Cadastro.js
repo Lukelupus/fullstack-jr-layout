@@ -1,11 +1,55 @@
-import React from "react"
+import React, { useState } from "react"
 
 function Cadastro() {
+
+    const [inputValue, setInputVale] = useState('');
+
+    function handleInput(e) {
+        const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+        setInputVale(formattedPhoneNumber)
+        return 
+    }
+
+    function formatPhoneNumber(value) {
+        if(!value) {
+            return value
+        }
+        const phoneNumber = value.replace(/[^\d]/g,"")
+        const phoneNumberLength = phoneNumber.length
+        if(phoneNumberLength < 3) {
+            return phoneNumber;
+        } if(phoneNumberLength < 7) {
+            return `(${phoneNumber.slice(0,2)}) ${phoneNumber.slice(2)}`
+        }
+        if(phoneNumberLength === 11)
+       { return `(${phoneNumber.slice(0,2)}) ${phoneNumber.slice(2, 3)} ${phoneNumber.slice(3,7)}-${phoneNumber.slice(7, 11)}`}
+    }
+
+
     return (
     <>
-    <section className="blue-section">
-        <h2>Cadastro</h2>
-    </section>
+    <div id="cadastro" className="blue-section">
+        <h2 className="page-title">Cadastro</h2>
+        <form action="/" method="post">
+            <div className="input-data">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome"></input>
+            </div>
+            <div className="input-data">
+                <label for="nome">E-mail</label>
+                <input type="email" name="email"></input>
+            </div>
+            <div className="input-data">
+                <label for="nome">Nascimento</label>
+                <input type="text" name="nascimento"></input>
+            </div>
+            <div className="input-data">
+                <label for="nome">Telefone</label>
+                <input onChange={handleInput} value={inputValue} type="tel" name="telefone"></input>
+            </div>
+            <button className="btn" type="submit" name="button">CADASTRAR</button>
+        </form>
+    </div>
     </>
     )
 }

@@ -12,6 +12,7 @@ const Desktop = ({ children }) => {
 
 function Header() {
     return(<>
+    <section className="header-section">
     <div className="header">
         <div className="nav-container">
             <nav className="navbar">
@@ -46,7 +47,7 @@ function Header() {
         <Mobile>
         <img className="index-img" src="imagens/index-image-mobile.jpg" alt="estagio prova de seleção mobile"></img>
         </Mobile>
-    
+    </section>
     </>
     )
 }
