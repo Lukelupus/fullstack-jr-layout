@@ -16,6 +16,19 @@
     
 }
 
+::placeholder { 
+  color: var(--bg-primary);
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+  color: var(--bg-primary);
+}
+
+::-ms-input-placeholder { 
+  color: var(--bg-primary);
+}
+
 
  @font-face {
     font-family: 'Helvetica 25';
@@ -32,6 +45,7 @@
     font-family: 'Roboto Light';
     src: local('Roboto Leve'), 
         url(../src/Fonts/Roboto-Light_0.ttf);
+      unicode-range: U+30-39;
   }
   @font-face {
     font-family: 'Roboto Regular';

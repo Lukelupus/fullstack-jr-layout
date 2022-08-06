@@ -14,7 +14,7 @@ const Desktop = ({ children }) => {
 function Footer() {
     return(
         <>
-            <div className='footer'>
+            <div id='sobre' className='footer'>
                 <div className='footer-info'>
                     <p className='info-text'>Fulano Beltrano de Oliveira</p>
                     <p className='info-text'>fulanobos@gmail.com</p>

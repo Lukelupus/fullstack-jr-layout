@@ -12,7 +12,7 @@ const Desktop = ({ children }) => {
 
 function Header() {
     return(<>
-    <section className="header-section">
+    <section id="top" className="header-section">
     <div className="header">
         <div className="nav-container">
             <nav className="navbar">

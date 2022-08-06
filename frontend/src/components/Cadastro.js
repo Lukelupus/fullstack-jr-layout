@@ -29,23 +29,23 @@ function Cadastro() {
     return (
     <>
     <div id="cadastro" className="blue-section">
-        <h2 className="page-title">Cadastro</h2>
+        <h2 className="page-title">CADASTRO</h2>
         <form action="/" method="post">
             <div className="input-data">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome"></input>
+                <input type="text" name="nome" placeholder="Fulano Beltrano de Oliveira Silva"></input>
             </div>
             <div className="input-data">
                 <label for="nome">E-mail</label>
-                <input type="email" name="email"></input>
+                <input type="email" name="email" placeholder="fulanobos@gmail.com"></input>
             </div>
             <div className="input-data">
                 <label for="nome">Nascimento</label>
-                <input type="text" name="nascimento"></input>
+                <input type="text" name="nascimento" placeholder="13/10/1995"></input>
             </div>
             <div className="input-data">
                 <label for="nome">Telefone</label>
-                <input onChange={handleInput} value={inputValue} type="tel" name="telefone"></input>
+                <input onChange={handleInput} value={inputValue} type="tel" name="telefone" placeholder="(31) 9 9666-1111"></input>
             </div>
             <button className="btn" type="submit" name="button">CADASTRAR</button>
         </form>
