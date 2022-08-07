@@ -1,4 +1,6 @@
 import React from "react"
+import hamburguer from "../icones/hamburguer.svg"
+import hamburguerAberto from "../icones/hamburguer-aberto0.svg"
 import { useMediaQuery } from "react-responsive"
 
 const Desktop = ({ children }) => {
@@ -19,19 +21,25 @@ function Header() {
                 <div className="logo-container">
                     <img className="logo" src="logo-in8-dev.svg" alt="logo"></img>
                 </div>
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <a href="#cadastro">cadastro</a>
-                    </li>
-                    <hr className="header-hr"></hr>
-                    <li className="nav-item">
-                    <a href="#lista">lista</a>
-                    </li>
-                    <hr className="header-hr"></hr>
-                    <li className="nav-item">
-                    <a href="#sobre">sobre mim</a>
-                    </li>
-                </ul>
+                <div className="nav-menu">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <a className="a-header" href="#cadastro">cadastro</a>
+                        </li>
+                        <hr className="header-hr"></hr>
+                        <li className="nav-item">
+                        <a className="a-header" href="#lista">lista</a>
+                        </li>
+                        <hr className="header-hr"></hr>
+                        <li className="nav-item">
+                        <a className="a-header" href="#sobre">sobre mim</a>
+                        </li>
+                    </ul>
+                    <div className="hamburguer">
+                        <img className="hamburguer-img" alt="hamburguer" src={hamburguer}></img>
+                        <img className="hamburguer-aberto-img" alt="hamburguer" src={hamburguerAberto}></img>
+                    </div>
+                </div>
 
             </nav>
             <div className="header-container">
