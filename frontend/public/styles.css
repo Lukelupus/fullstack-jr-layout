@@ -23,6 +23,7 @@ a {
 }
 
 
+
 .navbar {
     z-index: 1;
     display: flex;
@@ -43,8 +44,8 @@ a {
     width: 50%;
     justify-content: center;
     align-items: center;
-    margin-right: 3em;
-    gap: 1em;
+    gap: 3px;
+    margin-right: 15em;
     
     
 }
@@ -57,6 +58,11 @@ a {
    
 }
 
+.a-header {
+    width: 80px;
+    text-align: center;
+}
+
 
 .logo-container {
    display: flex;
@@ -64,6 +70,7 @@ a {
    width: 10em;
    justify-content: center;
    align-items: center;
+   margin-right: 10em;
 }
 
 .hamburguer {
@@ -275,7 +282,7 @@ tr:last-child {
     font-family: 'Helvetica 25';
     font-weight: bold;
     font-size: 3em;
-    padding-top: 1em;
+    padding: 1em 0;
     color: var(--text-primary);
 }
 
@@ -297,7 +304,7 @@ tr:last-child {
     width: 35px;
     height: 35px;
     left: 87.5%;
-    bottom: -102%;
+    bottom: -108%;
     
 }
 
@@ -331,33 +338,50 @@ tr:last-child {
 @media only screen and (max-width: 1224px) {
 
     .header {
-        left:0;
-        align-items: center;
-        justify-content: center;
+      left: 10%;
     }
     .nav-container {
-        width: 130%;
+        width: 100%;
+        z-index: 1;
+        
+        }
+
+    .nav-container.active {
+        background: linear-gradient(90deg, var(--bg-secondary) 50%, rgba(0, 0, 255, 0) 50%);
+    
     }
     .navbar {
         flex-direction: row-reverse;
         font-size: 10px;
-        gap: 28em;
+        justify-content: space-between;
+        gap: 15em;
+        position: inherit;
+        height: 60%;
+        
     }
 
     .logo {
-        margin: 0 0 2em;
+        margin-bottom: 2em;
         
     }
     .logo-container {
-        margin-left: 7.5em;
+        margin: 0 0 9em 5em;
     }
     
     .nav-menu {
         display: flex;
         flex-direction: column-reverse;
         gap: 1em;
-        margin-top: 2em;
+        padding: 1em 15em 1em 1em;
+        font-size: 15px;
+        margin-bottom: 2em;
+       
         
+        
+    }
+
+    .nav-menu.active {
+        background: var(--bg-secondary);
     }
 
     .navbar-nav {
@@ -365,6 +389,9 @@ tr:last-child {
         justify-content: left;
         align-items: left;
         text-align: left;
+        padding-left: .5em;
+        gap: 2em;
+        margin: 0 0 1em 1em;
     }
 
     .nav-item {
@@ -374,7 +401,6 @@ tr:last-child {
     .nav-item.active {
      width: 100%;
      display: block;
-     padding: 1em 0;
      visibility: visible;
     }
 
@@ -392,18 +418,32 @@ tr:last-child {
         cursor: pointer;
         width: 20px;
         height: 20px;
+        margin-left: 1em;
+    }
+
+    .hamburguer.active {
+        background-color: var(--bg-secondary);
+        color: white;
+    }
+
+    .hamburguer-img.active {
+        display: none;
     }
     .hamburguer-aberto-img {
         display: none;
     }
 
+    .hamburguer-aberto-img.active {
+       display: block;
+    }
+
     .index-img {
        background-clip: content-box;
-        object-fit:scale-down;
+      
     }
 
     .header-container {
-        margin: 2em 0 0 6em;
+        margin: 0 0 0 6em;
     }
 
     .header-text {
@@ -415,8 +455,24 @@ tr:last-child {
         font-size: 1.5em;
     }
 
+
+
     table {
         max-width: 35em;
+    }
+
+
+    .input-data {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .table-data {
+        font-size: 12px;
+   }
+    .info-text {
+        
+        font-size: 10px;
+        font-weight: lighter;
     }
 
 }
