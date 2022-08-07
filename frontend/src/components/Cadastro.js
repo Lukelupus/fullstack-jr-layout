@@ -1,8 +1,47 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import axios from 'axios'
 
 function Cadastro() {
 
     const [inputValue, setInputVale] = useState('');
+    const [registrationData, setRegistrationData] = useState([]);
+    const [registration, setRegistration] = useState({
+        name: '',
+        email:'',
+        birth: '',
+        tel: '',
+      });
+
+    function addData(newData) {
+        setRegistrationData(prevData => {
+        return [...prevData, newData];
+      });
+    }
+
+    
+    
+      function handleChange(event) {
+        const { name, value } = event.target;
+    
+        setRegistration(prevNote => {
+          return {
+            ...prevNote,
+            [name]: value
+          };
+        });
+      }
+    
+      function submitRegistration(e) {
+        addData(registration);
+        setRegistration({
+            name: '',
+            email:'',
+            birth: '',
+            tel: '',
+        });
+        e.preventDefault();
+      }
+   
 
     function handleInput(e) {
         const formattedPhoneNumber = formatPhoneNumber(e.target.value);
