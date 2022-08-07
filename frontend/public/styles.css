@@ -230,6 +230,7 @@ td {
     width: 15%;
     
     
+    
 }
 td:first-child {
     border-left: 0;
@@ -283,6 +284,7 @@ tr:last-child {
     font-family: ps;
     font-weight: lighter;
     font-size: 15px;
+    height: 39px;
     
 }
 
@@ -291,7 +293,7 @@ tr:last-child {
     width: 35px;
     height: 35px;
     left: 87.5%;
-    bottom: -110%;
+    bottom: -102%;
     
 }
 
