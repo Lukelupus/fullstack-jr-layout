@@ -9,6 +9,11 @@ const Desktop = ({ children }) => {
     return isDesktop ? children : null
   }
 
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+    return isMobile ? children : null
+  }
+
 function ListaDeCadastro() {
 
     const [tableData, setTableData] = useState([]);
@@ -103,9 +108,9 @@ function ListaDeCadastro() {
     return(
         <>
             <div id="lista" className="white-section">
-                <h2 className="list-title">Lista de Cadastro</h2>
-                <table {...getTableProps()}>
-                    <thead className=''>
+                <h2 className="list-title">LISTA DE CADASTRO</h2>
+                <table className='desktop-table' {...getTableProps()}>
+                    <thead >
                         {headerGroups.map(headerGroup => (
                             <tr {...headerGroup.getHeaderGroupProps()}>
                                 {
@@ -137,6 +142,41 @@ function ListaDeCadastro() {
                                    }
                     </tbody>
                 </table>
+                <Mobile>
+                <div className='table-mobile-container'>
+                     <div className='div-one'>
+                            
+                        <div className='content-div active'>
+                             <table >
+                                <tr>
+                                    <th className='table-heading  th-mobile'>NOME</th>
+                                    <td className='table-data td-mobile'>Fulano Beltrano de Oliveira da Silva</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>E-MAIL</th>
+                                    <td className='table-data td-mobile'>fulanobos@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>NASC.</th>
+                                    <td className='table-data td-mobile'>13/10/1995</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>TEL.</th>
+                                    <td className='table-data td-mobile'>(31) 9 9666-1111</td>
+                                </tr>
+                                </table> 
+                            </div>
+                          
+                            
+                        </div> 
+                        <div className='number-container'>
+                            <div className='content-number active'>1</div>
+                            <div className='content-number'>2</div>
+                            <div className='content-number'>3</div>
+                            <div className='content-number'>4</div>
+                        </div>
+                </div>
+                </Mobile>
                 <Desktop>
                    <a href='#top'><img className='top-page-pointer' src={TopoPagina} alt='top'></img></a>
                 </Desktop>

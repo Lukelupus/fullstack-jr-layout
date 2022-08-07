@@ -28,7 +28,7 @@ function Header() {
         if (active === true) {
             setActive(false)
         }
-     
+     e.preventDefault()
     }
     return(<>
 

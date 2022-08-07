@@ -42,7 +42,7 @@
         url(../src/Fonts/ps.ttf) format("truetype");
   }
   @font-face {
-    font-family: 'Roboto Light';
+    font-family: 'Roboto Leve';
     src: local('Roboto Leve'), 
         url(../src/Fonts/Roboto-Light_0.ttf);
       unicode-range: U+30-39;
