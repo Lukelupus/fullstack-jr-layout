@@ -16,7 +16,7 @@ const postRegistration = asyncHandler(async (req, res) => {
         throw new Error("Email já cadastrado")
     }
     
-    const newRegistration = await Registration.create({
+     register.push({
         name: nome,
         email: email,
         birth: nascimento,
@@ -24,8 +24,10 @@ const postRegistration = asyncHandler(async (req, res) => {
     })
 
     res.status(200).json(
-        newRegistration
+        register
     )
 })
+
+
 
 export default postRegistration
