@@ -320,3 +320,17 @@ tr:last-child {
     font-family: 'Roboto Light';
     font-size: 14px;
 }
+
+
+/* Tablets */
+
+@media only screen and (max-width: 1224px) {
+
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+
+}
