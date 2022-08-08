@@ -21,6 +21,10 @@ O frontend foi feito com ReactJS e as seguintes bibliotecas/frameworks:
 
 1) Clone o repositório;
 2) Instale as dependencias e módulos:
+#Backend:
+### `npm install`
+#Frontend:
+### `cd frontend`
 ### `npm install`
 3) Inicie o aplicativo:
 ### `npm run dev`
@@ -38,5 +42,9 @@ As requisições [GET] e [POST] buscam e postam dados diretamente de um banco de
 ### Deployment
 
 Até o momento, o aplicativo não há deploy.
+
+### Observações
+
+Neste repositório existe um arquivo .env no lugar de .envexemple. Isto porquê um banco de dados gratuito foi criado apenas para a realização deste teste.
 
 
