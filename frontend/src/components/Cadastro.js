@@ -1,54 +1,59 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import axios from 'axios'
 
 function Cadastro() {
 
-    const [inputValue, setInputVale] = useState('');
-    const [registrationData, setRegistrationData] = useState([]);
-    const [registration, setRegistration] = useState({
-        name: '',
-        email:'',
-        birth: '',
-        tel: '',
-      });
+    const [telefone, setTelefone] = useState('');
+    const [nome, setNome] = useState('')
+    const [email, setEmail] = useState('')
+    const [nascimento, setNascimento] = useState('')
+    const instance = axios.create({baseURL: 'http://localhost:5000'})
+      async function postData() {
+        try {
+            await instance.post('/', {
+                nome,
+                email,
+                nascimento,
+                telefone
+            }).catch(err => {
+                console.log(err);
+            }).then(res => {
+                console.log(res.data);
+            });
 
-    function addData(newData) {
-        setRegistrationData(prevData => {
-        return [...prevData, newData];
-      });
+        } catch (error) {
+        }
+
     }
 
-    
-    
-      function handleChange(event) {
-        const { name, value } = event.target;
-    
-        setRegistration(prevNote => {
-          return {
-            ...prevNote,
-            [name]: value
-          };
-        });
+      function handleName(e) {
+        const name = e.target.value
+        setNome(name)
       }
-    
-      function submitRegistration(e) {
-        addData(registration);
-        setRegistration({
-            name: '',
-            email:'',
-            birth: '',
-            tel: '',
-        });
-        e.preventDefault();
+
+      function handleEmail(e) {
+        const name = e.target.value
+        setEmail(name)
       }
-   
+
+      function handleBirth(e) {
+        const name = e.target.value
+        setNascimento(name)
+      }
 
     function handleInput(e) {
         const formattedPhoneNumber = formatPhoneNumber(e.target.value);
-        setInputVale(formattedPhoneNumber)
+        setTelefone(formattedPhoneNumber)
         return 
     }
 
+    function handleSubmit(e) {
+        setNome('')
+        setEmail('')
+        setTelefone('')
+        setNascimento('')
+        e.preventDefault()
+    }
     function formatPhoneNumber(value) {
         if(!value) {
             return value
@@ -69,24 +74,24 @@ function Cadastro() {
     <>
     <div id="cadastro" className="blue-section">
         <h2 className="page-title">CADASTRO</h2>
-        <form action="/" method="post">
+        <form onSubmit={handleSubmit} action="/" method="post">
             <div className="input-data">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" placeholder="Fulano Beltrano de Oliveira Silva"></input>
+                <input value={nome} onChange={handleName} type="text" name="nome" placeholder="Fulano Beltrano de Oliveira Silva"></input>
             </div>
             <div className="input-data">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" placeholder="fulanobos@gmail.com"></input>
+                <input onChange={handleEmail} value={email}  type="email" name="email" placeholder="fulanobos@gmail.com"></input>
             </div>
             <div className="input-data">
                 <label for="nascimento">Nascimento</label>
-                <input type="text" name="nascimento" placeholder="13/10/1995"></input>
+                <input onChange={handleBirth} value={nascimento}  type="text" name="nascimento" placeholder="13/10/1995"></input>
             </div>
             <div className="input-data">
                 <label for="telefone">Telefone</label>
-                <input onChange={handleInput} value={inputValue} type="tel" name="telefone" placeholder="(31) 9 9666-1111"></input>
+                <input onChange={handleInput} value={telefone} type="tel" name="telefone" placeholder="(31) 9 9666-1111"></input>
             </div>
-            <button className="btn" type="submit" name="button">CADASTRAR</button>
+            <button onClick={postData} className="btn" type="submit" name="button">CADASTRAR</button>
         </form>
     </div>
     </>

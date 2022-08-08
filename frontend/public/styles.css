@@ -168,6 +168,10 @@ input:-webkit-autofill:active  {
   
 }
 
+input::placeholder {
+    opacity: calc(0.4);
+}
+
 
 .blue-section {
     display: flex;

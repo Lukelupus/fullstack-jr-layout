@@ -16,27 +16,31 @@ const Desktop = ({ children }) => {
 function ListaDeCadastro() {
 
     const [tableData, setTableData] = useState([]);
-    const instance = axios.create({baseURL: 'http://localhost:5000'})
-    const fetchRegistrationData = async () => {
-          try {
-            await instance.get('/').catch(err => {
-                console.log(err)
-            }).then(res => {
-                console.log(res.data)
-                setTableData(res.data)
-               
-            })
-            
-          } catch (error) {
-            
-          } 
+    const [url, setUrl] = useState('')
 
-       
-    }
+
+    const instance = axios.create({baseURL: 'http://localhost:5000'})
+   
 
     useEffect(() => {
-        fetchRegistrationData()
-    }, [])
+        
+            try {
+               instance.get('/').catch(err => {
+                  console.log(err)
+              }).then(res => {
+                  setTableData(res.data)
+                  setUrl(res.data)
+                 
+              })
+              
+            } catch (error) {
+              
+            } 
+  
+         
+      
+        
+    }, [instance, url])
 
 
   
@@ -94,19 +98,19 @@ function ListaDeCadastro() {
                              <table >
                                 <tr>
                                     <th className='table-heading  th-mobile'>NOME</th>
-                                    <td className='table-data td-mobile'>Fulano Beltrano de Oliveira da Silva</td>
+                                    <td className='table-data td-mobile'>{tableData.length === 0 ? "" : tableData[0].name}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>E-MAIL</th>
-                                    <td className='table-data td-mobile'>fulanobos@gmail.com</td>
+                                    <td className='table-data td-mobile'>{tableData.length === 0 ? "" : tableData[0].email}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>NASC.</th>
-                                    <td className='table-data td-mobile'>13/10/1995</td>
+                                    <td className='table-data td-mobile'>{tableData.length === 0 ? "" : tableData[0].birth}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>TEL.</th>
-                                    <td className='table-data td-mobile'>(31) 9 9666-1111</td>
+                                    <td className='table-data td-mobile'>{tableData.length === 0 ? "" : tableData[0].tel}</td>
                                 </tr>
                                 </table> 
                             </div>
