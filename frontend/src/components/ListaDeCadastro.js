@@ -132,19 +132,19 @@ function ListaDeCadastro() {
                              <table >
                                 <tr>
                                     <th className='table-heading  th-mobile'>NOME</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].name}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 1 ? "" : tableData[1].name}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>E-MAIL</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].email}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 1 ? "" : tableData[1].email}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>NASC.</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].birth}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 1 ? "" : tableData[1].birth}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>TEL.</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].tel}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 1 ? "" : tableData[1].tel}</td>
                                 </tr>
                                 </table> 
                             </div>
@@ -152,19 +152,19 @@ function ListaDeCadastro() {
                              <table >
                                 <tr>
                                     <th className='table-heading  th-mobile'>NOME</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].name}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 2 ? "" : tableData[2].name}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>E-MAIL</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].email}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 2 ? "" : tableData[2].email}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>NASC.</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].birth}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 2 ? "" : tableData[2].birth}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>TEL.</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].tel}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 2 ? "" : tableData[2].tel}</td>
                                 </tr>
                                 </table> 
                             </div>
@@ -172,19 +172,19 @@ function ListaDeCadastro() {
                              <table >
                                 <tr>
                                     <th className='table-heading  th-mobile'>NOME</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].name}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 3 ? "" : tableData[3].name}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>E-MAIL</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].email}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 3 ? "" : tableData[3].email}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>NASC.</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].birth}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 3 ? "" : tableData[3].birth}</td>
                                 </tr>
                                 <tr>
                                     <th className='table-heading th-mobile'>TEL.</th>
-                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].tel}</td>
+                                    <td className='table-data td-mobile'>{tableData.length <= 3 ? "" : tableData[3].tel}</td>
                                 </tr>
                                 </table> 
                             </div>
