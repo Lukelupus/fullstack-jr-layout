@@ -17,7 +17,21 @@ function ListaDeCadastro() {
 
     const [tableData, setTableData] = useState([]);
     const [url, setUrl] = useState('')
+    const [click, setClick] = useState(1)
 
+
+    function selectTableOne(e) {
+        setClick(1)
+    }
+    function selectTableTwo(e) {
+        setClick(2)
+    }
+    function selectTableThree(e) {
+        setClick(3)
+    }
+    function selectTableFour(e) {
+        setClick(4)
+    }
 
     const instance = axios.create({baseURL: 'http://localhost:5000'})
    
@@ -94,7 +108,7 @@ function ListaDeCadastro() {
                 <Mobile>
                 <div className='table-mobile-container'>
                      <div className='div-one'> 
-                        <div className='content-div active'>
+                        <div className={click === 1? 'content-div active' : 'content-div'}>
                              <table >
                                 <tr>
                                     <th className='table-heading  th-mobile'>NOME</th>
@@ -114,14 +128,74 @@ function ListaDeCadastro() {
                                 </tr>
                                 </table> 
                             </div>
+                            <div className={click === 2? 'content-div active' : 'content-div'}>
+                             <table >
+                                <tr>
+                                    <th className='table-heading  th-mobile'>NOME</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].name}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>E-MAIL</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].email}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>NASC.</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].birth}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>TEL.</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 1 ? "" : tableData[1].tel}</td>
+                                </tr>
+                                </table> 
+                            </div>
+                            <div className={click === 3? 'content-div active' : 'content-div'}>
+                             <table >
+                                <tr>
+                                    <th className='table-heading  th-mobile'>NOME</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].name}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>E-MAIL</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].email}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>NASC.</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].birth}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>TEL.</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 2 ? "" : tableData[2].tel}</td>
+                                </tr>
+                                </table> 
+                            </div>
+                            <div className={click === 4? 'content-div active' : 'content-div'}>
+                             <table >
+                                <tr>
+                                    <th className='table-heading  th-mobile'>NOME</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].name}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>E-MAIL</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].email}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>NASC.</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].birth}</td>
+                                </tr>
+                                <tr>
+                                    <th className='table-heading th-mobile'>TEL.</th>
+                                    <td className='table-data td-mobile'>{tableData.length === 3 ? "" : tableData[3].tel}</td>
+                                </tr>
+                                </table> 
+                            </div>
                           
                             
                         </div> 
                         <div className='number-container'>
-                            <div className='content-number active'>1</div>
-                            <div className='content-number'>2</div>
-                            <div className='content-number'>3</div>
-                            <div className='content-number'>4</div>
+                            <div onClick={selectTableOne} className={click === 1 ? 'content-number active' : "content-number"}>1</div>
+                            <div onClick={selectTableTwo} className={click === 2 ? 'content-number active' : "content-number"}>2</div>
+                            <div onClick={selectTableThree} className={click === 3 ? 'content-number active' : "content-number"}>3</div>
+                            <div onClick={selectTableFour} className={click === 4 ? 'content-number active' : "content-number"}>4</div>
                         </div>
                 </div>
                 </Mobile>
