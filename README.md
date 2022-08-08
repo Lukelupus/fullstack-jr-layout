@@ -30,7 +30,8 @@ O frontend foi feito com ReactJS e as seguintes bibliotecas/frameworks:
 ### `npm run dev`
 
 Ele rodará no modo desenvolvedor.\
-Abra [http://localhost:3000](http://localhost:3000) para ver a realização do projeto.
+O frontend rodará em [http://localhost:3000](http://localhost:3000). Uma janela deve abrir automaticamente para visualizar o projeto. CAso não abra, basta apenas acessar o endereço.
+O backend rodará em [http://localhost:5000](http://localhost:5000).
 
 A página mudará caso mudanças sejam feitas, tais como adicionar novos cadastros.\
 
